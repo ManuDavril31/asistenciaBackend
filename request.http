@@ -1,0 +1,37 @@
+###
+POST http://localhost:9000/api/entrada HTTP/1.1
+Content-Type: application/json
+
+{
+  "fecha": "27/11/2022",
+  "nombre": "Manuel Martínez",
+  "cargo": "Soporte",
+  "cedula": 12346844,
+  "horaEntrada": "06:00",
+  "dineroEntrada": 5000,
+  "firmaEntrada": "Manuel Martinez",
+  "observaciones": "",
+  "horaSalida": "",
+  "dineroSalida": 0,
+  "firmaSalida": ""
+}
+
+###
+GET http://localhost:9000/api/entrada HTTP/1.1
+
+###
+GET http://localhost:9000/api/entrada/63842f450f146b76e749572f HTTP/1.1
+
+###
+PUT http://localhost:9000/api/entrada/638559826588378eff147974 HTTP/1.1
+Content-Type: application/json
+
+{
+  "observaciones": "Operaciones",
+  "horaSalida": "18:00",
+  "dineroSalida": 5000,
+  "firmaSalida": "Manuel Martinez"
+}
+
+###
+DELETE http://localhost:9000/api/entrada/638559826588378eff147974 HTTP/1.1
