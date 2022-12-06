@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import cors from "cors";
 
 import { router } from "./src/routes/users.js";
 
@@ -10,6 +11,10 @@ const port = process.env.PORT || 9000;
 dotenv.config();
 
 //MIDDELWARE
+//importante la politica de cors
+//Configurando las url de las cuales quiero que hagan peticiones a mi api
+//const whiteList = [] https://www.youtube.com/watch?v=ElcuQfA6aNY&ab_channel=VidaMRR-Programacionweb
+app.use(cors());
 //este middleware se ejecuta para convertir el objeto json que estamos envia a mongo atlas a un objeto de javaScript
 app.use(express.json());
 //en este caso el middleware le antepone a la ruta el prefijo /api, es decir, que la ruta qudaria así: /api/entrada

@@ -34,4 +34,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:9000/api/entrada/638559826588378eff147974 HTTP/1.1
+DELETE http://localhost:9000/api/entrada/638e9b88c03bb361e0c5aeaf HTTP/1.1
